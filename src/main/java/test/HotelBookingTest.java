@@ -26,25 +26,28 @@ public class HotelBookingTest {
 	 */
 	@BeforeTest
 	public void setup() {
+		String path = System.getProperty("user.dir");
 		if (PlatformUtil.isMac()) {
-			System.setProperty("webdriver.chrome.driver",
-					"D:\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", path
+					+ "\\src\\main\\resources\\chromedriver");
 		}
 		if (PlatformUtil.isWindows()) {
 
-			System.setProperty("webdriver.chrome.driver",
-					"D:\\chromedriver_win32\\chromedriver.exe");
-			Map<String, Object> prefs = new HashMap<String, Object>();
-			prefs.put("profile.default_content_setting_values.notifications", 2);
-			ChromeOptions options = new ChromeOptions();
-			options.setExperimentalOption("prefs", prefs);
-			driver = new ChromeDriver(options);
+			System.setProperty("webdriver.chrome.driver", path
+					+ "\\src\\main\\resources\\chromedriver.exe");
+
 		}
 		if (PlatformUtil.isLinux()) {
-			System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
+			System.setProperty("webdriver.chrome.driver", path
+					+ "\\src\\main\\resources\\chromedriver_linux");
 		}
-
+		Map<String, Object> prefs = new HashMap<String, Object>();
+		prefs.put("profile.default_content_setting_values.notifications", 2);
+		ChromeOptions options = new ChromeOptions();
+		options.setExperimentalOption("prefs", prefs);
+		driver = new ChromeDriver(options);
 		driver.get("https://www.cleartrip.com/");
+
 	}
 
 	/**

@@ -7,7 +7,6 @@
         <methods>
           <include name="setup"/>
           <include name="testFlightBooking"/>
-          <include name="quitBrowser"/>
         </methods>
       </class> <!-- test.FlightBookingTest -->
     </classes>

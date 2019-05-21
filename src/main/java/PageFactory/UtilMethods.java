@@ -56,7 +56,7 @@ public class UtilMethods {
 	new Select(webElement).selectByVisibleText(room);
 	}
 	
-	//select value from dropdown
+	//select value from dropdown for flight booking to pick from and to airport
 	public void selectValueFromDropdown(String state,WebElement lstSourceDestination,WebDriverWait wait,WebDriver driver) throws InterruptedException
 	{
 		wait.until(ExpectedConditions.visibilityOf(lstSourceDestination));
