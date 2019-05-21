@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="test runs" duration-ms="44871" started-at="2019-05-21T09:13:45Z" finished-at="2019-05-21T09:14:30Z">
+    <groups>
+    </groups>
+    <test name="FlightBookingTest" duration-ms="20772" started-at="2019-05-21T09:13:45Z" finished-at="2019-05-21T09:14:06Z">
+      <class name="test.FlightBookingTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.FlightBookingTest@2a18f23c]" name="setup" is-config="true" duration-ms="12226" started-at="2019-05-21T14:43:45Z" finished-at="2019-05-21T14:43:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testFlightBooking()[pri:0, instance:test.FlightBookingTest@2a18f23c]" name="testFlightBooking" duration-ms="7186" started-at="2019-05-21T14:43:58Z" finished-at="2019-05-21T14:44:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFlightBooking -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:test.FlightBookingTest@2a18f23c]" name="quitBrowser" is-config="true" duration-ms="1333" started-at="2019-05-21T14:44:05Z" finished-at="2019-05-21T14:44:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- test.FlightBookingTest -->
+    </test> <!-- FlightBookingTest -->
+    <test name="SignInTest" duration-ms="24056" started-at="2019-05-21T09:14:06Z" finished-at="2019-05-21T09:14:30Z">
+      <class name="test.SignInTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.SignInTest@3f0ee7cb]" name="setup" is-config="true" duration-ms="19183" started-at="2019-05-21T14:44:06Z" finished-at="2019-05-21T14:44:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testSignIn()[pri:0, instance:test.SignInTest@3f0ee7cb]" name="testSignIn" duration-ms="3582" started-at="2019-05-21T14:44:25Z" finished-at="2019-05-21T14:44:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSignIn -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:test.SignInTest@3f0ee7cb]" name="quitBrowser" is-config="true" duration-ms="1291" started-at="2019-05-21T14:44:29Z" finished-at="2019-05-21T14:44:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- test.SignInTest -->
+    </test> <!-- SignInTest -->
+  </suite> <!-- test runs -->
+</testng-results>
