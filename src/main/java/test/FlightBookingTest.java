@@ -1,44 +1,51 @@
 package test;
 
 
-import java.util.concurrent.TimeUnit;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.sun.javafx.PlatformUtil;
-
 import PageFactory.FlightBooking;
 
+import com.sun.javafx.PlatformUtil;
 
 
 
 
+
+@SuppressWarnings("restriction")
 public class FlightBookingTest {
 
 	WebDriver driver;
 	FlightBooking flightBooking;
 	
 	@BeforeTest
-	public void setup(){
+	public void setup() throws InterruptedException{
 		 if (PlatformUtil.isMac()) {
       	   System.setProperty ("webdriver.chrome.driver","D:\\chromedriver_win32\\chromedriver.exe");
       }
       if (PlatformUtil.isWindows()) {
       	  
       	  System.setProperty ("webdriver.chrome.driver","D:\\chromedriver_win32\\chromedriver.exe");
-      	  driver = new ChromeDriver();
+      	  Map<String, Object> prefs = new HashMap<String, Object>();
+      	  prefs.put("profile.default_content_setting_values.notifications", 2);
+      	  ChromeOptions options = new ChromeOptions();
+      	  options.setExperimentalOption("prefs", prefs);
+      	  driver = new ChromeDriver(options);
       }
       if (PlatformUtil.isLinux()) {
           System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
       }
       
       driver.get("https://www.cleartrip.com/");
+     
+     
 	}
 
 	
@@ -47,20 +54,21 @@ public class FlightBookingTest {
 	 * selects the boarding and destination airport 
 	 * picks the journey start date as current date
 	 * submits the details and then validates the search results
+	 * @throws InterruptedException 
 	 */
 	@Test
-	public void testFlightBooking(){
+	public void testFlightBooking() throws InterruptedException{
 		//Create Flight Booking object
 	flightBooking = new FlightBooking(driver);
+	
 	//click One way radio button
 	flightBooking.clickOneWayRadioButton();
 	//select from and destination airports 
 	flightBooking.setFromState("Ban");
-	flightBooking.waitTillVisible();
 	flightBooking.pickFromAirportName();
 	flightBooking.setToState("Delhi");
-	flightBooking.waitTillDestAirportNameIsVisible();
 	flightBooking.dropAtAirportName();
+	//
 	//pick boarding date
 	flightBooking.selectStartDateAsTodaysDate();
 	//Submit details entered
@@ -73,7 +81,7 @@ public class FlightBookingTest {
 	@AfterTest
 	public void quitBrowser()
 	{
-		flightBooking.quitBrowser();
+		flightBooking.quitBrowser(driver);
 	}
 	
 	
