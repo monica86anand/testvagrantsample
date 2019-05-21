@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19715" started-at="2019-05-21T09:51:14Z" finished-at="2019-05-21T09:51:34Z">
+  <suite name="Default suite" duration-ms="25951" started-at="2019-05-21T12:19:57Z" finished-at="2019-05-21T12:20:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19715" started-at="2019-05-21T09:51:14Z" finished-at="2019-05-21T09:51:34Z">
-      <class name="test.HotelBookingTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.HotelBookingTest@7f9a81e8]" name="setup" is-config="true" duration-ms="9252" started-at="2019-05-21T15:21:14Z" finished-at="2019-05-21T15:21:23Z">
+    <test name="Default test" duration-ms="25951" started-at="2019-05-21T12:19:57Z" finished-at="2019-05-21T12:20:23Z">
+      <class name="test.FlightBookingTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.FlightBookingTest@7f9a81e8]" name="setup" is-config="true" duration-ms="14794" started-at="2019-05-21T17:49:57Z" finished-at="2019-05-21T17:50:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testHotelBooking()[pri:0, instance:test.HotelBookingTest@7f9a81e8]" name="testHotelBooking" duration-ms="9006" started-at="2019-05-21T15:21:23Z" finished-at="2019-05-21T15:21:32Z">
+        <test-method status="PASS" signature="testFlightBooking()[pri:0, instance:test.FlightBookingTest@7f9a81e8]" name="testFlightBooking" duration-ms="9535" started-at="2019-05-21T17:50:12Z" finished-at="2019-05-21T17:50:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHotelBooking -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:test.HotelBookingTest@7f9a81e8]" name="quitBrowser" is-config="true" duration-ms="1424" started-at="2019-05-21T15:21:32Z" finished-at="2019-05-21T15:21:34Z">
+        </test-method> <!-- testFlightBooking -->
+        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:test.FlightBookingTest@7f9a81e8]" name="quitBrowser" is-config="true" duration-ms="1584" started-at="2019-05-21T17:50:22Z" finished-at="2019-05-21T17:50:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->
-      </class> <!-- test.HotelBookingTest -->
+      </class> <!-- test.FlightBookingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

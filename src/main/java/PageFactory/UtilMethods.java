@@ -1,5 +1,8 @@
 package PageFactory;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -51,5 +54,20 @@ public class UtilMethods {
 	public void selectOptionFromDropDown(WebElement webElement,String room)
 	{
 	new Select(webElement).selectByVisibleText(room);
+	}
+	
+	//select value from dropdown
+	public void selectValueFromDropdown(String state,WebElement lstSourceDestination,WebDriverWait wait,WebDriver driver) throws InterruptedException
+	{
+		wait.until(ExpectedConditions.visibilityOf(lstSourceDestination));
+		/** manupilation of webelement is done to iterate throught the list of weblements to identify the correct element to click on **/
+		String[] data = lstSourceDestination.toString().split(" -> ")[1].split(": ");
+	    String term = data[1].substring(0,data[1].length()-1);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(term)));
+		
+		List<WebElement> l1=driver.findElements(By.xpath(term));
+		
+		l1.get(0).click();
+		
 	}
 }

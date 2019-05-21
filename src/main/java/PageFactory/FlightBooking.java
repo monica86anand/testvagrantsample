@@ -17,6 +17,9 @@ public class FlightBooking extends UtilMethods {
 
 	@FindBy(id = "FromTag")
 	private WebElement txtFrom;
+	
+	@FindBy(xpath = "//ul//li[@class='list']//a[contains(text(),'')]")
+	private WebElement lstSourceDestination;
 
 	@FindBy(xpath = "//li[@class='list']//a[contains(text(),'Bangalore')]")
 	private WebElement lstFrom;
@@ -26,6 +29,9 @@ public class FlightBooking extends UtilMethods {
 
 	@FindBy(xpath = "//li[@class='list']//a[contains(text(),'Delhi')]")
 	private WebElement lstTo;
+	
+	@FindBy(xpath = "//i[@class='icon ir datePicker']")
+	private WebElement imgDatePicker;
 
 	@FindBy(xpath = "//a[@class='ui-state-default ui-state-highlight ui-state-active ']")
 	private WebElement dtpFrom;
@@ -80,6 +86,7 @@ public class FlightBooking extends UtilMethods {
 
 	// select the flight boarding date as today
 	public void selectStartDateAsTodaysDate() {
+		click(imgDatePicker);
 		waitTillVisible(wait, dtpFrom);
 		click(dtpFrom);
 	}
@@ -94,6 +101,11 @@ public class FlightBooking extends UtilMethods {
 	public boolean validateSearchResults() {
 		waitTillVisible(wait, lblSearch);
 		return lblSearch.isDisplayed();
+	}
+	
+	public void selectBoardingAndDestinationAirport(String s) throws InterruptedException
+	{
+		selectValueFromDropdown(s,lstSourceDestination,wait,driver);
 	}
 
 }

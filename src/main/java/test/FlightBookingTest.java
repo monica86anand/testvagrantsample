@@ -59,16 +59,20 @@ public class FlightBookingTest {
 		// click One way radio button
 		flightBooking.clickOneWayRadioButton();
 		// select from and destination airports
-		flightBooking.setFromState("Ban");
-		flightBooking.pickFromAirportName();
+	
+		
 		flightBooking.setToState("Delhi");
-		flightBooking.dropAtAirportName();
-		//
+		flightBooking.selectBoardingAndDestinationAirport("Delhi");
+		
+		flightBooking.setFromState("Bangalore");
+		flightBooking.selectBoardingAndDestinationAirport("Bangalore");
+		
 		// pick boarding date
 		flightBooking.selectStartDateAsTodaysDate();
 		// Submit details entered
 		flightBooking.clickSubmit();
 		// validate search results
+		
 		flightBooking.validateSearchResults();
 
 	}
