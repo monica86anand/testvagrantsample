@@ -20,3 +20,5 @@
 
 10. test methods can be added in testng.xml and this can then be referenced in pom.xml to invoke the tests all at once instead of invoking the tests from individual classes
 
+
+The code merged to master includes the above changes and maven has been used  instead of gradle
