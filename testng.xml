@@ -1,13 +1,18 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="test runs">
-  <test name="FlightBookingTest">
-    <classes>
-      <class name="test.FlightBookingTest"/>
-    </classes>
-  </test>
-  <test name="SignInTest">
-    <classes>
-      <class name="test.SignInTest"/>
-    </classes>
-  </test>
+	<test name="FlightBookingTest">
+		<classes>
+			<class name="test.FlightBookingTest" />
+		</classes>
+	</test>
+	<test name="SignInTest">
+		<classes>
+			<class name="test.SignInTest" />
+		</classes>
+	</test>
+	<test name="HotelBookingTest">
+		<classes>
+			<class name="test.HotelBookingTest" />
+		</classes>
+	</test>
 </suite>
