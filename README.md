@@ -1,3 +1,4 @@
+
 # testvagrantsample -feedback/improvements
 1. webdriver is initialized before setting the driver path
 
@@ -18,6 +19,4 @@
 9. page object methods to interact with elements need to be public 
 
 10. test methods can be added in testng.xml and this can then be referenced in pom.xml to invoke the tests all at once instead of invoking the tests from individual classes
-
-
 
